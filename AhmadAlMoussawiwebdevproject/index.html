@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clothes Store</title>
+  <link rel="icon" type="image/x-icon" href="images/clothes-shop.png" />
+  <link rel="stylesheet" href="./css/stylehead.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/stylefooter.css" />
+  <link rel="stylesheet" href="./css//media.css" />
+  <link rel="stylesheet" href="./css/stylecontactus.css">
+  <link rel="stylesheet" href="./css/cartstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head>
+
+<body>
+  
+  <div class="all">
+    <div class="header">
+      <div class="logot">
+        <img id="logo" src="images/clothes-market-high-resolution-logo-transparent.png" alt="logo" />
+       <!-- <h3>Ahmad Market's</h3> src of logo changed --> 
+      </div>
+      <!--<i class="fa-solid fa-bars navbar fa-2x" onclick="toggleNav()"></i>-->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="show">Categories</a>
+            <div class="dropdown-content">
+              <a href="#" onclick="filterProducts('shoes')">Shoes</a>
+              <a href="#" onclick="filterProducts('clothes')">Clothes</a>
+              <a href="#" onclick="filterProducts('cap')">Cap</a>
+              <a href="#" onclick="filterProducts('bag')">Bag</a>
+              <a href="#" onclick="filterProducts('belts')">Belts</a>
+              
+
+            </div>
+          </li>
+
+          <li><a href="#" id="aboutbtn">About</a></li>
+          <li><a href="#" id="contactbtn">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icon-cart">
+      <img id="cart" src="images/online-shopping.png" alt="cart" />
+      <span>0</span>
+      </div>
+    </div>
+    <div class="backshow">
+      <div class="whoami">
+        <p id="name">We Are Ahmad Market's</p>
+        <h1 style="font-style: italic;font-weight: bold;font-size:3em;color:rgb(40, 40, 40)">30% Sale Off</h1>
+        <h1 id="desc">Choose The Best Clothes For You! <span class="text"></span>
+          <br> Have A Good Day
+        </h1>
+
+        <button id="homeshop">
+          Shop Now <img id="next" src="images/next.png" alt="arrownext" />
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <div id="showallproduct"><Button id="showallproductbtn">Show All Products</Button></div>
+  <h1 style="text-align: center;margin:2em 0 ">Our Products:</h1>
+  <div id="showsomeproduct"></div>
+  <div class="creatingproduct">
+    <div class="head">
+      <h1>PRODUCT MANAGEMENT SYSTEM</h1>
+    </div>
+    <div id="message"></div>
+    <form class="inputs">
+      <input type="text" id="title" placeholder="title">
+      <div class="price">
+        <input onkeyup="gettotal()" type="number" id="price" placeholder="price">
+        <input onkeyup="gettotal()" type="number" id="taxes" placeholder="taxes">
+        <input onkeyup="gettotal()" type="number" id="ads" placeholder="ads">
+        <input onkeyup="gettotal()" type="number" id="discount" placeholder="discount">
+        <small id="total"></small>
+      </div>
+      <input type="number" id="count" placeholder="count">
+      <input type="text" id="imageurl" placeholder="imageurl">
+      <input type="text" id="descreption" placeholder="descreption">
+      <select name="category" id="category">
+        <option value="cap">Cap</option>
+        <option value="shoes">Shoes</option>
+        <option value="clothes">Clothes</option>
+        <option value="bag">Bag</option>
+        <option value="belts">Belts</option>
+       
+      </select>
+      <button class="btnform" id="submit">create</button>
+  </div>
+  <div class="outputs">
+    <div class="searchform">
+      <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="Search">
+      <i class="fa-solid fa-magnifying-glass  searchicon" onclick="find()"></i>
+    </div>
+    <div class="btnsearch">
+      <button class="btnform" onclick="getsearchmood(this.id)" id="searchtitle">Search by title</button>
+      <button class="btnform" onclick="getsearchmood(this.id)" id="searchcategory">Search by category</button>
+    </div>
+  </div>
+  <div id="deleteall"></div>
+  </form>
+  </div>
+  <div class="about">
+  <div class="head">
+    <h1>About Us</h1>
+  </div>
+  <p id="titleabout">We have many feature can help you and improve your experiance</p>
+  <div class="services-section">
+    <div class="service-item">
+    <img src="images/freeshipping.svg" alt="freeshipping">
+      <p class="service-title">Free Shipping</p>
+      <p class="service-text">It's not actually free we just price it into the products. Someone's paying for it, and it's not us.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/customersupport.svg" alt="customersupport">
+      <p class="service-title">24/7 Customer Support</p>
+      <p class="service-text">Our AI chat widget is powered by a naive series of if/else statements. Guaranteed to irritate.</p>
+    </div>
+  
+    <div class="service-item">
+     <img src="images/fastshopping.svg" alt="fastshopping">
+      <p class="service-title">Fast Shopping Cart</p>
+      <p class="service-text">Look how fast that cart is going. What does this mean for the actual experience? I don't know.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/giftcard.svg" alt="">
+      <p class="service-title">Gift Cards</p>
+      <p class="service-text">Buy them for your friends, especially if they don't like our store. Free money for us, it's great.</p>
+    </div>
+  </div>
+  </div>
+  <div class="conatctusfrom">
+    <div class="formcontact">
+      <div class="contactus">
+        <span>Contact Us Now</span>
+        <br>
+        <form action="">
+        <div class="control">
+          <input type="text" id="yourname" placeholder="Enter your Name" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="control">
+          <input type="text" id="email" placeholder="Enter your Email" required>
+          <label for="email">Email</label>
+
+        </div>
+        <div class="control">
+
+          <textarea name="problem" id="pass" placeholder="Write your problem" required></textarea>
+          <label for="pass">problem</label>
+        </div>
+        
+        <button>Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <h1 id="teaminfo">Our Team</h1>
+
+  <div id="team"></div>
+  <div class="review-container">
+    <div class="write-review-section">
+      <h1 id="titlereview">Customer Reviews</h1>
+      <div class="rating">
+        <i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i>
+        <i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i>
+        <i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i>
+        <i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i>
+        <i class="fa-solid fa-star fa-2xs" style="color:rgb(196, 196, 196)"></i>
+      </div>
+      <p>Based on 1624 reviews</p>
+      <span class="showrating"></span>
+      <h2>
+        Share your thoughts
+      </h2>
+      <p>If you’ve used this product, share your thoughts with other customers</p>
+      <div class="ratingbox">
+      <input type="text" placeholder="Title Your Review..." id="title_review"/>
+      <textarea  placeholder="Please enter your review: " id="userReview"></textarea>
+      <input type="number" id="ratingvalue" placeholder="Please enter your rating (1-5):">
+    </div>
+      <button class="write-review-button" id="writeReviewBtn">Write a review</button>
+    </div>
+    <div class="review-section"></div>
+  </div>
+  <div class="footer">
+    <div class="content">
+      <div class="foot">
+        <div class="logotf">
+          <img id="logo" src="images/clothes-shop.png" alt="logo" />
+          <h3>Ahmad Market's</h3>
+        </div>
+        <p>
+          Nabichit, 50th Street,4th <br />
+          Floor,XYZ 10022
+        </p>
+        <div class="social">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+          <i class="fa-brands fa-instagram fa-2x"></i>
+          <i class="fa-brands fa-twitter fa-2x"></i>
+          <i class="fa-brands fa-youtube fa-2x"></i>
+        </div>
+      </div>
+      <div class="foot">
+        <h2>Categories</h2>
+        <p>clothes </p>
+        <p>Dairy Products</p>
+        <p>cap & shoes & clothes</p>
+        <p>Bevarage</p>
+      </div>
+      <div class="foot">
+        <h2>Useful Links</h2>
+        <p>Payment & Tax</p>
+        <p>Term Of Us</p>
+        <p>My Account</p>
+        <p>Privacy Policy</p>
+      </div>
+    </div>
+    <p id="Copyright">Copyright © 2022 - 2023 AhmadALMoussawi®</p>
+  </div>
+  <img src="./images/scrooll.png" id="scr">
+  <div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <div class="listCart">
+        
+    </div>
+    <h2 id="totalpurchase"></h2>
+    <div class="btn">
+        <button class="close">CLOSE</button>
+        <button class="checkOut">Check Out</button>
+    </div>
+</div>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

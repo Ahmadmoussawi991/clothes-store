@@ -1,0 +1,89 @@
+.cartTab{
+    width: 25em;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -25em;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 4em 1fr 4em 4em;
+    transition: .5s;
+    
+}
+.containerpage{
+    transition: .5s;
+}
+body.showCart .cartTab{
+    right: 0;
+}
+
+.cartTab h1{
+    padding: 0.5em;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .close{
+    background-color: #eee;
+}
+.listCart .item img{
+    width: 100%;
+}
+.listCart .item{
+    display: grid;
+    grid-template-columns: 4em 6em 4em 1fr;
+    gap: 0.5em;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+.icon-cart span{
+    position:absolute;
+    background-color: #8a0000;
+    opacity: 0.8;
+    right: 2em;
+    width: 1em;
+    top:2em;
+    padding:0.3em;
+    text-align: center;
+    border-radius: 100%;
+    color:white
+}
+#totalpurchase{
+    text-align: center;
+    color: green;
+}

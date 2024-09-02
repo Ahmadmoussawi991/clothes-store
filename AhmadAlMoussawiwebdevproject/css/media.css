@@ -1,0 +1,110 @@
+@media only screen and (max-width: 1100px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 13px;
+  }
+
+}
+@media only screen and (max-width: 800px) {
+  body {
+    font-size: 12px;
+  }
+  .box{
+    width: 45% !important;
+  }
+  .control input,#pass{
+    width: 60% !important
+      }
+}
+@media only screen and (max-width: 750px) {
+  body {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  body {
+    font-size: 9px;
+  }
+  .box{
+    width: 40% !important;
+  }
+  .control input,#pass{
+    width: 70% !important
+      }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 8px;
+  }
+
+  .backshow {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .content {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content {
+    font-size: 6px;
+  }
+  .review-container{
+    flex-direction: column;
+    width: 90% !important;
+  margin:4em auto;
+  }
+  .write-review-section{
+    width: 90%;
+    margin:auto
+    
+  }
+  .review-section{
+    width: 90%;
+    margin:auto
+  }
+  #titlereview{
+text-align: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #team{
+    flex-direction: column;
+    align-items: center;
+    gap:3em
+  }
+  #teaminfo{
+    width:30%
+  }
+  /*nav {
+    display: none;
+  }
+  .navbar {
+    opacity: 1;
+  }*/
+  .box{
+    width:50% !important;
+  }
+  .control input,#pass{
+width: 90% !important
+  }
+  nav ul li {
+    padding: 0;
+  }
+}
